@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmmfc1vvnuyfq"]
+[gd_scene load_steps=12 format=3 uid="uid://bmmfc1vvnuyfq"]
 
 [ext_resource type="Texture2D" uid="uid://cbfj8x6yxtq32" path="res://Assets/Images/Hdr/LevelSky.hdr" id="1_5ufo3"]
 [ext_resource type="Script" uid="uid://dkv081yb17o7j" path="res://Scenes/Level/LevelBase.gd" id="1_78m1b"]
 [ext_resource type="PackedScene" uid="uid://diiqqw6341r72" path="res://Scenes/Hud/Hud.tscn" id="2_bgw71"]
 [ext_resource type="AudioStream" uid="uid://dvxhdoqb1xwpm" path="res://Assets/Audio/Music/Adventures in Adventureland.mp3" id="4_lmtt4"]
 [ext_resource type="AudioStream" uid="uid://cgnfsivumhmys" path="res://Assets/Audio/Music/Lord of the Rangs.mp3" id="5_ooqsx"]
+[ext_resource type="PackedScene" uid="uid://byfyf60k3pbwa" path="res://Scenes/Scenery/TestPlatform.tscn" id="6_v5c15"]
+[ext_resource type="PackedScene" uid="uid://dx3s5ue7ie78u" path="res://Scenes/Granny/Granny.tscn" id="7_yqkkm"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bgw71"]
 panorama = ExtResource("1_5ufo3")
@@ -42,4 +44,7 @@ stream = SubResource("AudioStreamRandomizer_txgif")
 volume_db = -6.0
 autoplay = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="TestPlatform" parent="." instance=ExtResource("6_v5c15")]
+
+[node name="Granny" parent="." instance=ExtResource("7_yqkkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.536743e-07, 0)
