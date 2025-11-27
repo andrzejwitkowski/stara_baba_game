@@ -1,0 +1,9 @@
+AnimationTree
+Label3D
+CollisionShape3D
+Camera3D
+Node3D
+CharacterBody3D
+MeshInstance3D
+GPUParticles2D
+AnimationPlayer

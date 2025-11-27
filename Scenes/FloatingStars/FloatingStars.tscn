@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://cjk2ldd1lqgmr"]
+
+[ext_resource type="Texture2D" uid="uid://ctn5y7drb5mmr" path="res://Assets/Images/Textures/dot.png" id="1_p37dn"]
+
+[sub_resource type="Curve" id="Curve_p37dn"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.27238804, 1), 0.0, 0.0, 0, 0, Vector2(0.6604478, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_swi6c"]
+curve = SubResource("Curve_p37dn")
+
+[sub_resource type="Gradient" id="Gradient_p37dn"]
+colors = PackedColorArray(0.8352941, 0, 0, 1, 0.78431374, 1, 0.23529412, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_swi6c"]
+gradient = SubResource("Gradient_p37dn")
+
+[sub_resource type="Curve" id="Curve_swi6c"]
+_data = [Vector2(0.0037313402, 0), 0.0, 0.0, 0, 0, Vector2(0.7425373, 1), 0.093419515, 0.093419515, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_i2jgx"]
+curve = SubResource("Curve_swi6c")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qjddi"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 10.45
+direction = Vector3(0, -1, 0)
+spread = 5.0
+initial_velocity_min = 80.0
+initial_velocity_max = 120.0
+angular_velocity_min = -200.00002
+angular_velocity_max = 199.99998
+gravity = Vector3(0, -20, 0)
+scale_min = 0.099999994
+scale_max = 0.29999998
+scale_curve = SubResource("CurveTexture_i2jgx")
+color = Color(1, 1, 0.5411765, 1)
+color_ramp = SubResource("GradientTexture1D_swi6c")
+alpha_curve = SubResource("CurveTexture_swi6c")
+
+[node name="FloatingStars" type="GPUParticles2D"]
+amount = 32
+texture = ExtResource("1_p37dn")
+lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_qjddi")
