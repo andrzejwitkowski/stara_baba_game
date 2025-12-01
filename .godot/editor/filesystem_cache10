@@ -1,12 +1,20 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1764267158
+::res://::1764615238
 icon.svg::CompressedTexture2D::8116842358924895146::1749023754::1764177802::1::::<><><>0<>0<>02755907e2a66c178f27b48fcc5e9e02<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1757335464
-::res://Assets/Audio/::1757335464
-::res://Assets/Audio/Music/::1764177801
-Adventures in Adventureland.mp3::AudioStreamMP3::8681139592277320794::1756328536::1764177801::1::::<><><>0<>0<>fb454678157a9acf4173fabac26d6de8<>res://.godot/imported/Adventures in Adventureland.mp3-7e2cd1da99a20a9b1f27c3f890337b97.mp3str::
-Boogie Party.mp3::AudioStreamMP3::6563520500145438097::1756328536::1764177800::1::::<><><>0<>0<>04d2cade70d0a61df09201df9c242e36<>res://.godot/imported/Boogie Party.mp3-3a22e3bb8f27ef66c07703c3df80540e.mp3str::
-Lord of the Rangs.mp3::AudioStreamMP3::5221147522824022186::1756328536::1764177801::1::::<><><>0<>0<>b7fe7883a8c3e9a09b14c7510d068d5a<>res://.godot/imported/Lord of the Rangs.mp3-572d2255829d2f567ab86f823912ae2a.mp3str::
+::res://Assets/Audio/::1764443508
+::res://Assets/Audio/Effects/::1764530853
+242503__wrong-action.wav::AudioStreamWAV::2020392166896053803::1764530853::1764530853::1::::<><><>0<>0<>aa3d585a863c3c019f4d9cec83b6e56b<>res://.godot/imported/242503__wrong-action.wav-f73c1c6cde42eb55075433c9ede4029c.sample::
+coin_pickup.wav::AudioStreamWAV::1470276870307588880::1764443529::1764443529::1::::<><><>0<>0<>248a035262fc7bcd9f735150a3bb72e7<>res://.godot/imported/coin_pickup.wav-51a29fa7782239ca3ebbb6ea9d212879.sample::
+Jewel_Collect.wav::AudioStreamWAV::3757805490110321989::1764443529::1764443529::1::::<><><>0<>0<>28b3d022577f757435fb4e879706eeb4<>res://.godot/imported/Jewel_Collect.wav-6a0c3e0ca5fb05473205bcc4b2919af3.sample::
+key-appears.wav::AudioStreamWAV::3377509099468035722::1764529110::1764529110::1::::<><><>0<>0<>e16bc8df009d8b818920cbb47379b79b<>res://.godot/imported/key-appears.wav-33a27923fbd50de8bd307c2f80a95218.sample::
+key_collect.ogg::AudioStreamOggVorbis::1809253342467609422::1764529110::1764529110::1::::<><><>0<>0<>201f644f89a87ac561c2e9710b4cda28<>res://.godot/imported/key_collect.ogg-5ae46da9b3a54fa932253783106d58c6.oggvorbisstr::
+::res://Assets/Audio/Music/::1764616485
+Adventures in Adventureland.mp3::AudioStreamMP3::8681139592277320794::1756328536::1764616485::1::::<><><>0<>0<>642d417c4e87771518155b6edd6a02d3<>res://.godot/imported/Adventures in Adventureland.mp3-7e2cd1da99a20a9b1f27c3f890337b97.mp3str::
+Boogie Party.mp3::AudioStreamMP3::6563520500145438097::1756328536::1764616482::1::::<><><>0<>0<>504af342d76bd3c3607ff347600cd651<>res://.godot/imported/Boogie Party.mp3-3a22e3bb8f27ef66c07703c3df80540e.mp3str::
+Darkling.mp3::AudioStreamMP3::677546360497149480::1764616431::1764616467::1::::<><><>0<>0<>dc1939b3a1f21a81660968ae8123ff34<>res://.godot/imported/Darkling.mp3-0e78e6025bb5a2944c7f780643b3935d.mp3str::
+Lord of the Rangs.mp3::AudioStreamMP3::5221147522824022186::1756328536::1764616479::1::::<><><>0<>0<>2f16c4bae8ba6d236331aa1d4ee73d7e<>res://.godot/imported/Lord of the Rangs.mp3-572d2255829d2f567ab86f823912ae2a.mp3str::
+Paradise_Found.mp3::AudioStreamMP3::6465218731705485752::1764616431::1764616473::1::::<><><>0<>0<>857eec0de61eb8f0b456a79b3126d461<>res://.godot/imported/Paradise_Found.mp3-3d1317d05d654e0adc09ece1ec10404d.mp3str::
 ::res://Assets/Fonts/::1764177802
 LuckiestGuy-Regular.ttf::FontFile::6808066846248396204::1739380338::1764177802::1::::<><><>0<>0<>943144edf05c346fa99ea92e391c01bf<>res://.godot/imported/LuckiestGuy-Regular.ttf-96a87f43a55b4280ab9763470571b49c.fontdata::
 ::res://Assets/Images/::1764185565
@@ -14,9 +22,15 @@ BG_2D.jpeg::CompressedTexture2D::472809143760338440::1749105782::1764177800::1::
 GrannyPose-removebg-preview.png::CompressedTexture2D::188448229830115089::1740405440::1764177800::1::::<><><>0<>0<>008d2963deea3483468388d477146258<>res://.godot/imported/GrannyPose-removebg-preview.png-125a402db5c4fb595d6bbe03c3b8711f.ctex::
 ::res://Assets/Images/Hdr/::1764177801
 LevelSky.hdr::CompressedTexture2D::4853958740976235483::1749024278::1764177801::1::::<><><>0<>0<>b690482d9814b34544e77b2eccd661a5<>res://.godot/imported/LevelSky.hdr-b2b8274670d02522ce9b7649b56d8cc9.bptc.ctex::
-::res://Assets/Images/Textures/::1764267158
-dot.png::CompressedTexture2D::6135132362304855737::1764185584::1764185584::1::::<><><>0<>0<>6689ca0fac48150e20f38eaba4bd9d6b<>res://.godot/imported/dot.png-ce7dac1ca0a8122a0fc235716cdf3119.ctex::
-::res://Assets/Images/Textures/kenney_prototype-textures/::1764267159
+::res://Assets/Images/Textures/::1764525736
+dot.png::CompressedTexture2D::6135132362304855737::1764185584::1764440777::1::::<><><>0<>0<>6995a6640fe9cf11e860d6820aaa9ac8<>res://.godot/imported/dot.png-ce7dac1ca0a8122a0fc235716cdf3119.s3tc.ctex::
+::res://Assets/Images/Textures/Items/::1764529121
+coin-gold.png::CompressedTexture2D::1576990888265699270::1764525743::1764525743::1::::<><><>0<>0<>bd4269bc971439ba19a600bf5d3d9ff6<>res://.godot/imported/coin-gold.png-dfec012d7e5a46190bd8cafa2b136a79.ctex::
+jewel.png::CompressedTexture2D::6239684872746413550::1764525743::1764525743::1::::<><><>0<>0<>3160f8f52008aad2d93bccbcd14cc91b<>res://.godot/imported/jewel.png-c5543f34a78b804319b1ddad9c1bd0fd.ctex::
+key.png::CompressedTexture2D::2048797766137157168::1764529120::1764529121::1::::<><><>0<>0<>4290e227daa6acae47c0e64286d5e1fe<>res://.godot/imported/key.png-dd232a7e7ee2a65ea8b7634fdcec0671.ctex::
+::res://Assets/Images/Textures/kenney_prototype-textures/::1764530870
+door-rotate-large.glb::PackedScene::760523123303733650::1764530869::1764530870::1::::<><><>0<>0<>7ad6fe197e049b1b705f8f4c0845d354<>res://.godot/imported/door-rotate-large.glb-21d9c8a183cd8602c86a5711d03902a5.scn::
+fence-straight.glb::PackedScene::2093722627178228683::1764530869::1764530870::1::::<><><>0<>0<>e27bab8600e2fa8802aa2417c42cf9f6<>res://.godot/imported/fence-straight.glb-d7c43b6a5b80bf507dd4f025aeec544d.scn::
 License.txt::TextFile::-1::1764267132::0::1::::<><><>0<>0<><>::
 Preview.png::CompressedTexture2D::3614790581342423062::1764267132::1764267159::1::::<><><>0<>0<>615eca884268f827bbfb97d495b768aa<>res://.godot/imported/Preview.png-9ca1a4b7794819b92addb3f50482219c.ctex::
 Sample.png::CompressedTexture2D::5738399235891042995::1764267132::1764267159::1::::<><><>0<>0<>7f3cbf0b2bc618b06b76eb7821004875<>res://.godot/imported/Sample.png-94bbe843315f735e1186a283e7c15a85.ctex::
@@ -49,7 +63,7 @@ texture_10.png::CompressedTexture2D::4522655774461352334::1764267132::1764267159
 texture_11.png::CompressedTexture2D::5950396402649653201::1764267132::1764267159::1::::<><><>0<>0<>6a03f610c26f0e8fbdc23d7163a5954a<>res://.godot/imported/texture_11.png-77475ed14d538a300c50930ed7b78b54.ctex::
 texture_12.png::CompressedTexture2D::656689193458828903::1764267132::1764267159::1::::<><><>0<>0<>c3a3875fa198b508a703b5808b402b0c<>res://.godot/imported/texture_12.png-6932a8759a5765370cf4cc5bd23bf896.ctex::
 texture_13.png::CompressedTexture2D::5473567394012205396::1764267132::1764267159::1::::<><><>0<>0<>444a9d594edbfba114f7dda8b604542e<>res://.godot/imported/texture_13.png-97bb2bc81417dc7efecf4f483f2428da.ctex::
-::res://Assets/Images/Textures/kenney_prototype-textures/PNG/Light/::1764267159
+::res://Assets/Images/Textures/kenney_prototype-textures/PNG/Light/::1764268057
 texture_01.png::CompressedTexture2D::6632021181886101192::1764267132::1764267159::1::::<><><>0<>0<>86d745ffe2c17f0fd4f7632b3c9c764a<>res://.godot/imported/texture_01.png-5c4fe79eb64c1c1295e697bc3bf1a65e.ctex::
 texture_02.png::CompressedTexture2D::2943929992381110775::1764267132::1764267159::1::::<><><>0<>0<>0e5dad37db7f1a0901a6e2a095b54ff9<>res://.godot/imported/texture_02.png-22e0c2a3851ccbbfe8d3b020efdc22a4.ctex::
 texture_03.png::CompressedTexture2D::6315117043493063850::1764267132::1764267159::1::::<><><>0<>0<>86b146424ee858a83a2a530830cf221c<>res://.godot/imported/texture_03.png-16ede665352022b2fd7c7426d0bf0a90.ctex::
@@ -119,35 +133,64 @@ texture_10.svg::CompressedTexture2D::4901370495754928781::1764267132::1764267159
 texture_11.svg::CompressedTexture2D::3035851561696092027::1764267132::1764267159::1::::<><><>0<>0<>da1e1c3590da700fefa3052108db4cd0<>res://.godot/imported/texture_11.svg-e1ee6bfba1ecb7c20cf2bad8d4d7a25b.ctex::
 texture_12.svg::CompressedTexture2D::1271871947658862802::1764267133::1764267159::1::::<><><>0<>0<>28fbbc39f14aaf9786403e37087ae177<>res://.godot/imported/texture_12.svg-927409e547974938b4af914abaa331e6.ctex::
 texture_13.svg::CompressedTexture2D::2268387458241555658::1764267133::1764267159::1::::<><><>0<>0<>366c239873df3386b88541d758fdfc33<>res://.godot/imported/texture_13.svg-95d6c28263c977170a72a8e3c5845c10.ctex::
-::res://Assets/Models/::1764267115
+::res://Assets/Models/::1764440043
 ::res://Assets/Models/Granny/::1764267158
 Granny.glb::PackedScene::3121569908678886435::1764267132::1764267140::1::::<><><>0<>0<>11da86653a4c012a6d599ff559691e71<>res://.godot/imported/Granny.glb-937cec13182d2bfeb21a2b8c0a6b0781.scn::uid://cun8117bh1w85::::res://Assets/Models/Granny/Granny_FitnessGrandma_diffuse.jpg<>uid://dp4xeg2vqy8ik::::res://Assets/Models/Granny/Granny_FitnessGrandma_normal.jpg<>uid://n6wbi2wjkya3::::res://Assets/Models/Granny/Granny_FitnessGrandma_FaceAnimMap.png
 Granny_FitnessGrandma_diffuse.jpg::CompressedTexture2D::6205506657449130808::1764267136::1764267141::1::::<><><>0<>0<>0dec59961c9d864dc6d9e7fbca1afc4c<>res://.godot/imported/Granny_FitnessGrandma_diffuse.jpg-c7d77354853f2d44394e83be29321c44.s3tc.ctex::
 Granny_FitnessGrandma_FaceAnimMap.png::CompressedTexture2D::977788700213588700::1764267138::1764267141::1::::<><><>0<>0<>43f08745446d8ba8e68e12dd943fdfec<>res://.godot/imported/Granny_FitnessGrandma_FaceAnimMap.png-bebdad3e816fae2a340a0d4205caba71.s3tc.ctex::
 Granny_FitnessGrandma_normal.jpg::CompressedTexture2D::8273365652353097790::1764267135::1764267141::1::::<><><>0<>0<>0f60ac47e21575382177ba760ce308eb<>res://.godot/imported/Granny_FitnessGrandma_normal.jpg-dd4f528e326461938eb46a7d872b1b98.s3tc.ctex::
 Granny_FitnessGrandma_spec.jpg::CompressedTexture2D::2999111530733244321::1764267134::1764267135::1::::<><><>0<>0<>9a63de4b4e209d21742c65f90fd32393<>res://.godot/imported/Granny_FitnessGrandma_spec.jpg-aef164c5aae3509e0245151c4da7fa14.ctex::
-::res://Classes/::1764177740
+::res://Assets/Models/Kenney/::1764440049
+::res://Assets/Models/Kenney/Platformer/::1764440065
+coin-gold.glb::PackedScene::3337387226447675957::1764440063::1764440064::1::::<><><>0<>0<>fdcfcd35fed249eebbe5038284e3f4bc<>res://.godot/imported/coin-gold.glb-5ff97d0d1a471280f3a89330381d45e8.scn::uid://ubb7fhlmd8b2::::res://Assets/Models/Kenney/Platformer/Textures/colormap.png
+jewel.glb::PackedScene::8614360359693459399::1764440063::1764440064::1::::<><><>0<>0<>36033d8af6328320a730513833f1c4ec<>res://.godot/imported/jewel.glb-29419cd40ac34e532dc0e66579b68a63.scn::uid://ubb7fhlmd8b2::::res://Assets/Models/Kenney/Platformer/Textures/colormap.png
+key.glb::PackedScene::7167688429180948867::1764440063::1764440065::1::::<><><>0<>0<>2f502da7a592cec436dd3381050c9587<>res://.godot/imported/key.glb-0ecaa9573917c1ad80bcfa882bedde68.scn::uid://ubb7fhlmd8b2::::res://Assets/Models/Kenney/Platformer/Textures/colormap.png
+::res://Assets/Models/Kenney/Platformer/Textures/::1764440064
+colormap.png::CompressedTexture2D::1405959386858794041::1764440063::1764440064::1::::<><><>0<>0<>2cd9fd2a86f5d5352fd6c7808f3e5194<>res://.godot/imported/colormap.png-12ddd7b1c19ae283c08fc264f6beb398.s3tc.ctex::
+::res://Classes/::1764524609
 GrannyUtils.gd::GDScript::6644533540729907616::1750855892::0::1::::GrannyUtils<>RefCounted<><>0<>0<><>::
-::res://Globals/::1764181549
+PickUpScores.gd::GDScript::5117430480614097123::1764524609::0::1::::PickUpScores<>RefCounted<><>0<>0<><>::
+::res://Globals/::1764615894
 GameManager.gd::GDScript::4841506288047898381::1764181549::0::1::::<>Node<><>0<>0<><>::
-SignalHub.gd::GDScript::4905435906850129744::1750856202::0::1::::<>Node<><>0<>0<><>::
+SignalHub.gd::GDScript::4905435906850129744::1764615894::0::1::::<>Node<><>0<>0<><>::
 ::res://Resources/::1764182742
 HighScore.gd::GDScript::7607514170343131357::1749045530::0::1::::HighScore<>Resource<><>0<>0<><>::
 HighScores.gd::GDScript::85427351559090885::1749045522::0::1::::HighScores<>Resource<><>0<>0<><>::
 ShootLabel.tres::LabelSettings::4283208980247355292::1764182742::0::1::::<><><>0<>0<><>::
 TitleLabel.tres::LabelSettings::2205966085509460031::1764182727::0::1::::<><><>0<>0<><>::
-::res://Scenes/::1764267372
-::res://Scenes/FloatingStars/::1764186321
+::res://Scenes/::1764616952
+::res://Scenes/Effects/::1764440631
+::res://Scenes/Effects/FloatingStars/::1764186321
 FloatingStars.tscn::PackedScene::5426843903607860337::1764186321::0::1::::<><><>0<>0<><>::uid://ctn5y7drb5mmr::::res://Assets/Images/Textures/dot.png
-::res://Scenes/Hud/::1764177740
-Hud.gd::GDScript::3673489168199257680::1750849584::0::1::::<>Control<><>0<>0<><>::
-Hud.tscn::PackedScene::7738289071517410559::1750849588::0::1::::<><><>0<>0<><>::uid://bslp3hmi6b0do::::res://Scenes/Hud/Hud.gd
-::res://Scenes/Level/::1764181549
-LevelBase.gd::GDScript::7906080679076770369::1764181477::0::1::::<>Node<><>0<>0<><>::
-LevelBase.tscn::PackedScene::3253767895970175850::1764181549::0::1::::<><><>0<>0<><>::uid://cbfj8x6yxtq32::::res://Assets/Images/Hdr/LevelSky.hdr<>uid://dkv081yb17o7j::::res://Scenes/Level/LevelBase.gd<>uid://diiqqw6341r72::::res://Scenes/Hud/Hud.tscn<>uid://dvxhdoqb1xwpm::::res://Assets/Audio/Music/Adventures in Adventureland.mp3<>uid://cgnfsivumhmys::::res://Assets/Audio/Music/Lord of the Rangs.mp3
-::res://Scenes/Main/::1764186437
+::res://Scenes/Effects/PickupStars/::1764441538
+PickupStars.tscn::PackedScene::2671367241122661939::1764441538::0::1::::<><><>0<>0<><>::uid://ctn5y7drb5mmr::::res://Assets/Images/Textures/dot.png
+::res://Scenes/Granny/::1764274456
+Granny.gd::GDScript::1958997822788047973::1764273575::0::1::::Granny<>CharacterBody3D<><>0<>0<><>::
+Granny.tscn::PackedScene::8832555569665705110::1764274456::0::1::::<><><>0<>0<><>::uid://257n4thcxxpt::::res://Scenes/Granny/Granny.gd<>uid://cun8117bh1w85::::res://Assets/Models/Granny/Granny_FitnessGrandma_diffuse.jpg<>uid://dp4xeg2vqy8ik::::res://Assets/Models/Granny/Granny_FitnessGrandma_normal.jpg<>uid://n6wbi2wjkya3::::res://Assets/Models/Granny/Granny_FitnessGrandma_FaceAnimMap.png
+::res://Scenes/Hud/::1764616659
+Hud.gd::GDScript::3673489168199257680::1764616659::0::1::::<>Control<><>0<>0<><>::
+Hud.tscn::PackedScene::7738289071517410559::1764616659::0::1::::<><><>0<>0<><>::uid://bslp3hmi6b0do::::res://Scenes/Hud/Hud.gd<>uid://wp52r2yb5xfa::::res://Assets/Images/Textures/Items/coin-gold.png<>uid://cu5sx0fa5hr31::::res://Assets/Images/Textures/Items/jewel.png<>uid://4gpnuixukwse::::res://Assets/Images/Textures/Items/key.png
+::res://Scenes/Level/::1764615970
+LevelBase.gd::GDScript::7906080679076770369::1764615950::0::1::::<>Node<><>0<>0<><>::
+LevelBase.tscn::PackedScene::3253767895970175850::1764615970::0::1::::<><><>0<>0<><>::uid://cbfj8x6yxtq32::::res://Assets/Images/Hdr/LevelSky.hdr<>uid://dkv081yb17o7j::::res://Scenes/Level/LevelBase.gd<>uid://diiqqw6341r72::::res://Scenes/Hud/Hud.tscn<>uid://dvxhdoqb1xwpm::::res://Assets/Audio/Music/Adventures in Adventureland.mp3<>uid://cgnfsivumhmys::::res://Assets/Audio/Music/Lord of the Rangs.mp3<>uid://byfyf60k3pbwa::::res://Scenes/Scenery/TestPlatform.tscn<>uid://dx3s5ue7ie78u::::res://Scenes/Granny/Granny.tscn<>uid://vavyjw54lhwx::::res://Scenes/Pickup/Jewel.tscn<>uid://b5mhy3md11srd::::res://Scenes/Pickup/Coin.tscn<>uid://coltj80l1uumf::::res://Scenes/Pickup/PickUpTracker.tscn<>uid://7x4ejobcta6i::::res://Scenes/Pickup/Key.tscn<>uid://bymri7vdhwe0::::res://Scenes/LevelExit/LevelExit.tscn
+::res://Scenes/LevelExit/::1764615970
+LevelExit.gd::GDScript::5560011746604883002::1764615970::0::1::::<>Node3D<><>0<>0<><>::
+LevelExit.tscn::PackedScene::120493342724043905::1764533095::0::1::::<><><>0<>0<><>::uid://43hknqdmld3p::::res://Assets/Images/Textures/kenney_prototype-textures/fence-straight.glb<>uid://k3nx7wub01gg::::res://Assets/Images/Textures/kenney_prototype-textures/door-rotate-large.glb<>uid://clhkt02ctiacg::::res://Scenes/LevelExit/LevelExit.gd<>uid://31xtf028bnfv::::res://Assets/Audio/Effects/242503__wrong-action.wav
+::res://Scenes/LifeTimer/::1764616956
+LifeTimer.tscn::PackedScene::2832402266074924561::1764616956::0::1::::<><><>0<>0<><>::
+::res://Scenes/Main/::1764440566
 Main.gd::GDScript::7787867539681962532::1764184788::0::1::::<>Control<><>0<>0<><>::
-Main.tscn::PackedScene::1997044498255591860::1764186437::0::1::::<><><>0<>0<><>::uid://di7rbm5bu141m::::res://Scenes/Main/Main.gd<>uid://g0bdky50wv6w::::res://Assets/Images/BG_2D.jpeg<>uid://c0rohuud0ny0h::::res://Assets/Audio/Music/Boogie Party.mp3<>uid://b2a23c82567iu::::res://Resources/ShootLabel.tres<>uid://hr3dpkfkrsea::::res://Scenes/Main/TitleLabel.tres<>uid://cxjykk8513y8::::res://Assets/Images/GrannyPose-removebg-preview.png<>uid://cjk2ldd1lqgmr::::res://Scenes/FloatingStars/FloatingStars.tscn
+Main.tscn::PackedScene::1997044498255591860::1764440566::0::1::::<><><>0<>0<><>::uid://di7rbm5bu141m::::res://Scenes/Main/Main.gd<>uid://g0bdky50wv6w::::res://Assets/Images/BG_2D.jpeg<>uid://c0rohuud0ny0h::::res://Assets/Audio/Music/Boogie Party.mp3<>uid://b2a23c82567iu::::res://Resources/ShootLabel.tres<>uid://hr3dpkfkrsea::::res://Scenes/Main/TitleLabel.tres<>uid://cxjykk8513y8::::res://Assets/Images/GrannyPose-removebg-preview.png<>uid://cjk2ldd1lqgmr::::res://Scenes/Effects/FloatingStars/FloatingStars.tscn
 TitleLabel.tres::LabelSettings::528122564003944472::1764182756::0::1::::<><><>0<>0<><>::
-::res://Scenes/Scenery/::1764267614
-TestPlatform.tscn::PackedScene::4082742623908424744::1764267614::0::1::::<><><>0<>0<><>::
+::res://Scenes/Pickup/::1764532611
+Coin.tscn::PackedScene::4517327893249423965::1764524240::0::1::::<><><>0<>0<><>::uid://bg85uqqvtawk6::::res://Scenes/Pickup/Pickup.tscn<>uid://bnswjrx7oy20x::::res://Assets/Models/Kenney/Platformer/coin-gold.glb<>uid://u7hilrcfi1ii::::res://Assets/Audio/Effects/coin_pickup.wav
+Jewel.tscn::PackedScene::1475284140398599431::1764443755::0::1::::<><><>0<>0<><>::uid://bg85uqqvtawk6::::res://Scenes/Pickup/Pickup.tscn<>uid://btskris3x7nxt::::res://Assets/Audio/Effects/Jewel_Collect.wav<>uid://duy4iytpqagh8::::res://Assets/Models/Kenney/Platformer/jewel.glb
+Key.gd::GDScript::8149453434319323771::1764529496::0::1::::<>PickUp<><>0<>0<><>::
+Key.tscn::PackedScene::2295292115112527230::1764532611::0::1::::<><><>0<>0<><>::uid://bg85uqqvtawk6::::res://Scenes/Pickup/Pickup.tscn<>uid://dodwkpmtkx172::::res://Scenes/Pickup/Key.gd<>uid://daec1tc6moak6::::res://Assets/Models/Kenney/Platformer/key.glb
+Pickup.gd::GDScript::1203514545427820789::1764525179::0::1::::PickUp<>Area3D<><>0<>0<><>::
+Pickup.tscn::PackedScene::2877536303136392859::1764525210::0::1::::<><><>0<>0<><>::uid://re8ydj3dnp4h::::res://Scenes/Pickup/Pickup.gd<>uid://becba7tgecrt0::::res://Scenes/Effects/PickupStars/PickupStars.tscn
+PickUpTracker.gd::GDScript::3448489746589683995::1764532611::0::1::::PickUpTracker<>Node<><>0<>0<><>::
+PickUpTracker.tscn::PackedScene::5779364801047029069::1764525356::0::1::::<><><>0<>0<><>::uid://bpeqefmyd3kc6::::res://Scenes/Pickup/PickUpTracker.gd
+::res://Scenes/Scenery/::1764270378
+TestPlatform.tscn::PackedScene::4082742623908424744::1764270378::0::1::::<><><>0<>0<><>::uid://bhqilcxdbbfly::::res://Assets/Images/Textures/kenney_prototype-textures/PNG/Light/texture_07.png
+::res://Scenes/Utilities/::1764616891

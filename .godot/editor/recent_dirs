@@ -1,7 +1,12 @@
+res://Scenes/Utilities/TestBunny
+res://Scenes/Utilities/LinkPlayer
+res://Scenes/Utilities/FallsOff
+res://Scenes/LevelExit
+res://Scenes/Pickup
+res://Scenes/Effects/PickupStars
 res://Scenes/Granny
 res://Scenes/Scenery
 res://Scenes/Level
-res://Scenes/FloatingStars
 res://Scenes/Main
 res://Resources
 res://Assets/Fonts

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Adventures in Adventureland.mp3-7e2cd1da99a20
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

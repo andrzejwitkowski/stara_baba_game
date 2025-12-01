@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca0mrrno0su3b"]
+
+[ext_resource type="Script" uid="uid://dunyqrlk3he3j" path="res://Scenes/Utilities/FallsOff/FallsOff.gd" id="1_o6m7l"]
+
+[node name="FallsOff" type="Node3D"]
+script = ExtResource("1_o6m7l")

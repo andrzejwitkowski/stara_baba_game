@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://coltj80l1uumf"]
+
+[ext_resource type="Script" uid="uid://bpeqefmyd3kc6" path="res://Scenes/Pickup/PickUpTracker.gd" id="1_eqfkp"]
+
+[node name="PickUpTracker" type="Node"]
+script = ExtResource("1_eqfkp")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd5wu2yojsjpj"]
+
+[ext_resource type="Script" uid="uid://b06mv1clntdk1" path="res://Scenes/Utilities/TestBunny/TestBunny.gd" id="1_aw5dr"]
+[ext_resource type="PackedScene" uid="uid://bjuommonxcf7w" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn" id="3_3ryuw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gtr4u"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_aw5dr"]
+radius = 0.25
+height = 1.0
+
+[node name="TestBunny" type="Node3D"]
+script = ExtResource("1_aw5dr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_gtr4u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.0001938343, 0, -0.45264035)
+mesh = SubResource("CapsuleMesh_aw5dr")
+
+[node name="LinkPlayer" parent="." instance=ExtResource("3_3ryuw")]

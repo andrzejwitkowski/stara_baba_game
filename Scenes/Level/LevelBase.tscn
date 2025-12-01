@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmmfc1vvnuyfq"]
+[gd_scene load_steps=17 format=3 uid="uid://bmmfc1vvnuyfq"]
 
 [ext_resource type="Texture2D" uid="uid://cbfj8x6yxtq32" path="res://Assets/Images/Hdr/LevelSky.hdr" id="1_5ufo3"]
 [ext_resource type="Script" uid="uid://dkv081yb17o7j" path="res://Scenes/Level/LevelBase.gd" id="1_78m1b"]
@@ -7,6 +7,11 @@
 [ext_resource type="AudioStream" uid="uid://cgnfsivumhmys" path="res://Assets/Audio/Music/Lord of the Rangs.mp3" id="5_ooqsx"]
 [ext_resource type="PackedScene" uid="uid://byfyf60k3pbwa" path="res://Scenes/Scenery/TestPlatform.tscn" id="6_v5c15"]
 [ext_resource type="PackedScene" uid="uid://dx3s5ue7ie78u" path="res://Scenes/Granny/Granny.tscn" id="7_yqkkm"]
+[ext_resource type="PackedScene" uid="uid://vavyjw54lhwx" path="res://Scenes/Pickup/Jewel.tscn" id="8_y3j2c"]
+[ext_resource type="PackedScene" uid="uid://b5mhy3md11srd" path="res://Scenes/Pickup/Coin.tscn" id="9_kt428"]
+[ext_resource type="PackedScene" uid="uid://coltj80l1uumf" path="res://Scenes/Pickup/PickUpTracker.tscn" id="10_6ehlo"]
+[ext_resource type="PackedScene" uid="uid://7x4ejobcta6i" path="res://Scenes/Pickup/Key.tscn" id="10_yeolc"]
+[ext_resource type="PackedScene" uid="uid://bymri7vdhwe0" path="res://Scenes/LevelExit/LevelExit.tscn" id="12_ilrmw"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bgw71"]
 panorama = ExtResource("1_5ufo3")
@@ -48,3 +53,22 @@ autoplay = true
 
 [node name="Granny" parent="." instance=ExtResource("7_yqkkm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.536743e-07, 0)
+
+[node name="Pickups" type="Node" parent="."]
+
+[node name="Jewel" parent="Pickups" instance=ExtResource("8_y3j2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.108749)
+
+[node name="Coin" parent="Pickups" instance=ExtResource("9_kt428")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6674776, 0, 4.3176994)
+
+[node name="Coin2" parent="Pickups" instance=ExtResource("9_kt428")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.713607, 0, 3.3666725)
+
+[node name="Key" parent="Pickups" instance=ExtResource("10_yeolc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3230143, 0, 4.742944)
+
+[node name="PickUpTracker" parent="." instance=ExtResource("10_6ehlo")]
+
+[node name="LevelExit" parent="." instance=ExtResource("12_ilrmw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11942577, 0, -4.2311144)

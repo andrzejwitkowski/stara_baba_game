@@ -1,6 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://diiqqw6341r72"]
+[gd_scene load_steps=10 format=3 uid="uid://diiqqw6341r72"]
 
 [ext_resource type="Script" uid="uid://bslp3hmi6b0do" path="res://Scenes/Hud/Hud.gd" id="1_ysf55"]
+[ext_resource type="Texture2D" uid="uid://wp52r2yb5xfa" path="res://Assets/Images/Textures/Items/coin-gold.png" id="2_iteex"]
+[ext_resource type="Texture2D" uid="uid://cu5sx0fa5hr31" path="res://Assets/Images/Textures/Items/jewel.png" id="3_xymhr"]
+[ext_resource type="Texture2D" uid="uid://4gpnuixukwse" path="res://Assets/Images/Textures/Items/key.png" id="4_bbjj2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ysf55"]
+font_size = 119
+font_color = Color(0.11764706, 0.31764707, 1, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_ighhf"]
+font_size = 64
+font_color = Color(0.1254902, 0.49019608, 0.16470589, 1)
+outline_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xymhr"]
+content_margin_left = 24.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 24.0
+bg_color = Color(0.0627451, 0.13725491, 0.3254902, 0.8392157)
+corner_detail = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_iteex"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_bbjj2"]
+font_size = 32
 
 [node name="Hud" type="Control"]
 process_mode = 3
@@ -11,3 +38,105 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ysf55")
+
+[node name="LevelCompletRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3647059, 0, 0.87058824, 0.60784316)
+
+[node name="VB" type="VBoxContainer" parent="LevelCompletRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CompleteLabel" type="Label" parent="LevelCompletRect/VB"]
+layout_mode = 2
+text = "LEVEL COMPLETE"
+label_settings = SubResource("LabelSettings_ysf55")
+
+[node name="ContinueLabel" type="Label" parent="LevelCompletRect/VB"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PRESS SHOOT TO CONTINUE"
+label_settings = SubResource("LabelSettings_ighhf")
+horizontal_alignment = 1
+
+[node name="PC" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xymhr")
+
+[node name="HB" type="HBoxContainer" parent="PC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 18
+
+[node name="HBJewel" type="HBoxContainer" parent="PC/HB"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PC/HB/HBJewel"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("3_xymhr")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="LabelJewels" type="Label" parent="PC/HB/HBJewel"]
+layout_mode = 2
+text = "0/100"
+label_settings = SubResource("LabelSettings_iteex")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBCoin" type="HBoxContainer" parent="PC/HB"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PC/HB/HBCoin"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_iteex")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="LabelCoins" type="Label" parent="PC/HB/HBCoin"]
+layout_mode = 2
+text = "0/100"
+label_settings = SubResource("LabelSettings_iteex")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KeyImage" type="TextureRect" parent="PC"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("4_bbjj2")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="LabelExit" type="Label" parent="PC"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+text = "go to exit"
+label_settings = SubResource("LabelSettings_bbjj2")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]

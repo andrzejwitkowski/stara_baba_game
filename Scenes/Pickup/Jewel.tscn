@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://vavyjw54lhwx"]
+
+[ext_resource type="PackedScene" uid="uid://bg85uqqvtawk6" path="res://Scenes/Pickup/Pickup.tscn" id="1_flj16"]
+[ext_resource type="AudioStream" uid="uid://btskris3x7nxt" path="res://Assets/Audio/Effects/Jewel_Collect.wav" id="2_ape01"]
+[ext_resource type="PackedScene" uid="uid://duy4iytpqagh8" path="res://Assets/Models/Kenney/Platformer/jewel.glb" id="2_mj4gv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mj4gv"]
+radius = 0.22
+
+[node name="Jewel" instance=ExtResource("1_flj16")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15035082, 0.00970006)
+shape = SubResource("SphereShape3D_mj4gv")
+
+[node name="Effects" parent="." index="1"]
+stream = ExtResource("2_ape01")
+
+[node name="jewel2" parent="Visuals" index="0" instance=ExtResource("2_mj4gv")]

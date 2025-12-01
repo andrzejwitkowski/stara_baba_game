@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjuommonxcf7w"]
+
+[ext_resource type="Script" uid="uid://dxha8te4gr5vj" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.gd" id="1_qv78v"]
+
+[node name="LinkPlayer" type="Node"]
+script = ExtResource("1_qv78v")

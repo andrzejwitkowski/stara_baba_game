@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://bymri7vdhwe0"]
+
+[ext_resource type="PackedScene" uid="uid://43hknqdmld3p" path="res://Assets/Images/Textures/kenney_prototype-textures/fence-straight.glb" id="1_6edub"]
+[ext_resource type="PackedScene" uid="uid://k3nx7wub01gg" path="res://Assets/Images/Textures/kenney_prototype-textures/door-rotate-large.glb" id="1_m8yfu"]
+[ext_resource type="Script" uid="uid://clhkt02ctiacg" path="res://Scenes/LevelExit/LevelExit.gd" id="1_xn2r3"]
+[ext_resource type="AudioStream" uid="uid://31xtf028bnfv" path="res://Assets/Audio/Effects/242503__wrong-action.wav" id="3_q37bc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6edub"]
+size = Vector3(1, 1.9718513, 0.14883423)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m8yfu"]
+size = Vector3(1.5921631, 2.3936157, 0.76135254)
+
+[node name="LevelExit" type="Node3D"]
+script = ExtResource("1_xn2r3")
+
+[node name="fence-straight2" parent="." instance=ExtResource("1_6edub")]
+transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 0, 0.117132545, 0.19034061)
+
+[node name="fence-straight3" parent="." instance=ExtResource("1_6edub")]
+transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 0, 0.7943056, 0.20132181)
+
+[node name="fence-straight4" parent="." instance=ExtResource("1_6edub")]
+transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 0, 1.4275535, 0.20498225)
+
+[node name="door-rotate-large2" parent="." instance=ExtResource("1_m8yfu")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+
+[node name="ExitArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExitArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0114307, 0.3394935)
+shape = SubResource("BoxShape3D_6edub")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016296387, 1.2007751, -0.14093018)
+shape = SubResource("BoxShape3D_m8yfu")
+
+[node name="LabelHolder" type="Node3D" parent="."]
+visible = false
+
+[node name="LabelKey" type="Label3D" parent="LabelHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012134321, 0.89568985, 0.38068065)
+modulate = Color(0.85490197, 0.49803922, 0.5137255, 1)
+text = "You need a key"
+
+[node name="Effects" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_q37bc")
+
+[connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
+[connection signal="body_exited" from="ExitArea" to="." method="_on_exit_area_body_exited"]
