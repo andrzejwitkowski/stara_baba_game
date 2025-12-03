@@ -7,6 +7,10 @@ signal on_jewels_collected
 signal on_key_collected
 signal on_level_completed
 signal on_player_died
+signal on_add_new_scene(ob: Node3D, new_position: Vector3)
+
+func emit_on_add_new_scene(ob: Node3D, new_position: Vector3) -> void:
+	SignalHub.on_add_new_scene.emit(ob, new_position)
 
 func emit_on_player_died() -> void:
 	on_player_died.emit()

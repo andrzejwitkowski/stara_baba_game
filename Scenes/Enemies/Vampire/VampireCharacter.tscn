@@ -1,0 +1,46 @@
+[gd_scene load_steps=11 format=3 uid="uid://bntaust4kg8hf"]
+
+[ext_resource type="Script" uid="uid://dkahq6smeohoq" path="res://Scenes/Enemies/Vampire/VampireCharacter.gd" id="1_k26hg"]
+[ext_resource type="PackedScene" uid="uid://bvacj8dyi3rii" path="res://Scenes/Enemies/Vampire/VampireModel.tscn" id="1_nq427"]
+[ext_resource type="PackedScene" uid="uid://ca0mrrno0su3b" path="res://Scenes/Utilities/FallsOff/FallsOff.tscn" id="2_xd3ts"]
+[ext_resource type="PackedScene" uid="uid://bjuommonxcf7w" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn" id="3_qv775"]
+[ext_resource type="AudioStream" uid="uid://dsrqjmgojcndf" path="res://Assets/Audio/Enemies/vampire-sucking-blood-short.wav" id="4_qv775"]
+[ext_resource type="AudioStream" uid="uid://yx37w2ca6ll3" path="res://Assets/Audio/Enemies/vampire1.wav" id="5_04t2h"]
+[ext_resource type="AudioStream" uid="uid://cgiqrs8c2cf50" path="res://Assets/Audio/Enemies/vampire2.wav" id="6_k26hg"]
+[ext_resource type="AudioStream" uid="uid://dq28txye8oo31" path="res://Assets/Audio/Enemies/vampire_running.wav" id="7_41n2j"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nq427"]
+radius = 0.30273438
+height = 1.2814941
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_e6ufl"]
+streams_count = 3
+stream_0/stream = ExtResource("5_04t2h")
+stream_1/stream = ExtResource("6_k26hg")
+stream_2/stream = ExtResource("7_41n2j")
+
+[node name="VampireCharacter" type="CharacterBody3D"]
+collision_layer = 0
+script = ExtResource("1_k26hg")
+
+[node name="VampireModel" parent="." instance=ExtResource("1_nq427")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6077881, 0)
+shape = SubResource("CapsuleShape3D_nq427")
+
+[node name="FallsOff" parent="." instance=ExtResource("2_xd3ts")]
+
+[node name="LinkPlayer" parent="." instance=ExtResource("3_qv775")]
+
+[node name="BlookdSuckEffect" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_qv775")
+
+[node name="RunningEffect" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_e6ufl")
+
+[node name="RunningTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="RunningTimer" to="." method="_on_running_timer_timeout"]

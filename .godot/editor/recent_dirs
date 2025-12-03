@@ -1,3 +1,8 @@
+res://Scenes/Turret
+res://Scenes/ObjectContainer
+res://Scenes/Enemies/Vampire
+res://Scenes/Enemies/Ghost
+res://Scenes/Enemies/Pumpkin
 res://Scenes/Utilities/TestBunny
 res://Scenes/Utilities/LinkPlayer
 res://Scenes/Utilities/FallsOff

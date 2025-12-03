@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://fc8n2b52abx1"]
+
+[ext_resource type="Script" uid="uid://dv13q6x6s5ik1" path="res://Scenes/Enemies/Pumpkin/Pumpkin.gd" id="1_foek2"]
+[ext_resource type="PackedScene" uid="uid://b6s2wiou8a5xf" path="res://Assets/Models/Kay/Pumpkin.glb" id="1_vv4x1"]
+[ext_resource type="AudioStream" uid="uid://8qgad7r3tsxu" path="res://Assets/Audio/Enemies/pumpkin.wav" id="2_w6hay"]
+[ext_resource type="Script" uid="uid://dxha8te4gr5vj" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.gd" id="3_3bi1x"]
+[ext_resource type="PackedScene" uid="uid://ca0mrrno0su3b" path="res://Scenes/Utilities/FallsOff/FallsOff.tscn" id="4_foek2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vv4x1"]
+radius = 0.4668579
+height = 0.9337158
+
+[node name="Pumpkin" type="CharacterBody3D"]
+collision_layer = 0
+script = ExtResource("1_foek2")
+
+[node name="Pumpkin" parent="." instance=ExtResource("1_vv4x1")]
+transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45526123, 0)
+shape = SubResource("CapsuleShape3D_vv4x1")
+
+[node name="Effect" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_w6hay")
+
+[node name="JumpTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="LinkPlayer" type="Node" parent="."]
+script = ExtResource("3_3bi1x")
+metadata/_custom_type_script = "uid://dxha8te4gr5vj"
+
+[node name="FallsOff" parent="." instance=ExtResource("4_foek2")]
+
+[node name="LabelDebug" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1831429, 0)
+billboard = 1
+text = "iii"
+font_size = 40
+
+[connection signal="timeout" from="JumpTimer" to="." method="_on_jump_timer_timeout"]

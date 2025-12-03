@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcuhgrwjm8om4"]
+
+[ext_resource type="PackedScene" uid="uid://vvfgglsxubqf" path="res://Assets/Models/Kenney/TowerDefense/tower-square-build-b.glb" id="1_adw2l"]
+[ext_resource type="Script" uid="uid://de1ob5ob6ssix" path="res://Scenes/Turret/Turret.gd" id="1_upwia"]
+[ext_resource type="PackedScene" uid="uid://d5ni2ukbe01l" path="res://Assets/Models/Kenney/TowerDefense/weapon-turret.glb" id="2_8n1bl"]
+[ext_resource type="PackedScene" uid="uid://bjuommonxcf7w" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn" id="3_8gyjb"]
+[ext_resource type="AudioStream" uid="uid://ky1nqiedsg2y" path="res://Assets/Audio/Effects/Spell_02_Short.wav" id="4_efegm"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8n1bl"]
+radius = 10.0
+
+[node name="Turret" type="Node3D"]
+script = ExtResource("1_upwia")
+
+[node name="tower-square-build-b2" parent="." instance=ExtResource("1_adw2l")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="weapon-turret2" parent="Pivot" instance=ExtResource("2_8n1bl")]
+transform = Transform3D(-1.5, 0, -1.3113416e-07, 0, 1.5, 0, 1.3113416e-07, 0, -1.5, 0, 1.2011825, 0)
+
+[node name="ShootPoint" type="Marker3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0068502426, 1.7160776, -0.47940016)
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="PlayerDetection" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerDetection"]
+shape = SubResource("SphereShape3D_8n1bl")
+
+[node name="LinkPlayer" parent="." instance=ExtResource("3_8gyjb")]
+
+[node name="Effect" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_efegm")
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="body_shape_entered" from="PlayerDetection" to="." method="_on_player_detection_body_shape_entered"]
+[connection signal="body_shape_exited" from="PlayerDetection" to="." method="_on_player_detection_body_shape_exited"]
