@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=3 uid="uid://dvnyse0ypnxtl"]
+
+[ext_resource type="Script" uid="uid://b5stoynpcblcu" path="res://Scenes/Fireball/Fireball.gd" id="1_2r5wd"]
+[ext_resource type="PackedScene" uid="uid://bgmbis0cwfw6t" path="res://Scenes/Utilities/LifeTimer/LifeTimer.tscn" id="1_ys5b6"]
+[ext_resource type="AudioStream" uid="uid://d1ykld024loyy" path="res://Assets/Audio/Effects/player_shoot.wav" id="2_62bbq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fqq7s"]
+shading_mode = 0
+disable_fog = true
+albedo_color = Color(0.5400174, 2.1074393, 2.1074393, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_fqq7s"]
+material = SubResource("StandardMaterial3D_fqq7s")
+radius = 0.15
+height = 0.3
+radial_segments = 8
+rings = 4
+
+[sub_resource type="Gradient" id="Gradient_62bbq"]
+offsets = PackedFloat32Array(0.23376623, 0.74025977)
+colors = PackedColorArray(0, 0.6113747, 0, 1, 0.36078432, 0.27450982, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2r5wd"]
+gradient = SubResource("Gradient_62bbq")
+
+[sub_resource type="Curve" id="Curve_62bbq"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.491018, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_2r5wd"]
+curve = SubResource("Curve_62bbq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_62bbq"]
+lifetime_randomness = 0.2
+emission_shape = 1
+emission_sphere_radius = 0.1
+spread = 1.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.19999999
+scale_max = 0.7
+scale_curve = SubResource("CurveTexture_2r5wd")
+color = Color(4.1673737, 1.7070905, 3.7892218, 1)
+color_ramp = SubResource("GradientTexture1D_2r5wd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_62bbq"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+disable_ambient_light = true
+disable_fog = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_62bbq"]
+material = SubResource("StandardMaterial3D_62bbq")
+radius = 0.05
+height = 0.1
+radial_segments = 8
+rings = 4
+
+[node name="Fireball" type="Node3D"]
+script = ExtResource("1_2r5wd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_fqq7s")
+
+[node name="LifeTimer" parent="." instance=ExtResource("1_ys5b6")]
+
+[node name="Effect" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_62bbq")
+autoplay = true
+
+[node name="Particles" type="GPUParticles3D" parent="."]
+amount = 32
+lifetime = 0.5
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_62bbq")
+draw_pass_1 = SubResource("SphereMesh_62bbq")

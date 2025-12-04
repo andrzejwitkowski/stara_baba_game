@@ -16,7 +16,7 @@ const GHOST = preload("res://Assets/Audio/Enemies/ghost.wav")
 var _on_screen: bool = false
 var _frozen_timer: float = 0.0
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if !link_player.granny:
 		return
 	try_chase(delta)

@@ -1,4 +1,7 @@
+BoneAttachment3D
+GPUParticles3D
 AudioStreamPlayer3D
+MeshInstance3D
 CollisionShape3D
 Area3D
 Timer
@@ -10,5 +13,3 @@ RayCast3D
 AnimationPlayer
 VisibleOnScreenNotifier3D
 LinkPlayer
-Label3D
-Label

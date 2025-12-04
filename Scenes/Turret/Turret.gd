@@ -2,10 +2,13 @@ extends Node3D
 
 class_name Turret
 
+const TURRET_BULLET = preload("res://Scenes/Turret/TurretBullet.tscn")
+
 @onready var link_player: LinkPlayer = $LinkPlayer
 @onready var effect: AudioStreamPlayer3D = $Effect
 @onready var shoot_timer: Timer = $ShootTimer
 @onready var pivot: Node3D = $Pivot
+@onready var shoot_point: Marker3D = $Pivot/ShootPoint
 
 func _process(delta: float) -> void:
 	if !link_player.granny:
@@ -29,6 +32,7 @@ func _on_shoot_timer_timeout() -> void:
 	shoot()
 	
 func shoot():
-	print("Shots fired!!")
+	var bullet = TURRET_BULLET.instantiate()
+	SignalHub.emit_on_add_new_scene(bullet, shoot_point.global_position)
 	effect.stop()
 	effect.play()
