@@ -1,14 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://fc8n2b52abx1"]
+[gd_scene load_steps=11 format=3 uid="uid://fc8n2b52abx1"]
 
 [ext_resource type="Script" uid="uid://dv13q6x6s5ik1" path="res://Scenes/Enemies/Pumpkin/Pumpkin.gd" id="1_foek2"]
 [ext_resource type="PackedScene" uid="uid://b6s2wiou8a5xf" path="res://Assets/Models/Kay/Pumpkin.glb" id="1_vv4x1"]
 [ext_resource type="AudioStream" uid="uid://8qgad7r3tsxu" path="res://Assets/Audio/Enemies/pumpkin.wav" id="2_w6hay"]
 [ext_resource type="Script" uid="uid://dxha8te4gr5vj" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.gd" id="3_3bi1x"]
 [ext_resource type="PackedScene" uid="uid://ca0mrrno0su3b" path="res://Scenes/Utilities/FallsOff/FallsOff.tscn" id="4_foek2"]
+[ext_resource type="PackedScene" uid="uid://1e1alrqipimu" path="res://Scenes/Collider/DamageCollider.tscn" id="6_j4bp1"]
+[ext_resource type="PackedScene" uid="uid://co8mx3k2bewsy" path="res://Scenes/Collider/HurtBox.tscn" id="7_4gme1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vv4x1"]
 radius = 0.4668579
 height = 0.9337158
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4gme1"]
+radius = 0.6
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jleyv"]
+radius = 0.6
 
 [node name="Pumpkin" type="CharacterBody3D"]
 collision_layer = 0
@@ -39,5 +47,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1831429, 0)
 billboard = 1
 text = "iii"
 font_size = 40
+
+[node name="DamageCollider" parent="." instance=ExtResource("6_j4bp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44787133, 0)
+collision_layer = 4
+explodes_on_hit = false
+dies_on_hit = false
+shape = SubResource("SphereShape3D_4gme1")
+
+[node name="HurtBox" parent="." instance=ExtResource("7_4gme1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45648408, 0)
+collision_layer = 128
+collision_mask = 16
+max_health = 20
+shape = SubResource("SphereShape3D_jleyv")
 
 [connection signal="timeout" from="JumpTimer" to="." method="_on_jump_timer_timeout"]

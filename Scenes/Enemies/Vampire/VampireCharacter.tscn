@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bntaust4kg8hf"]
+[gd_scene load_steps=15 format=3 uid="uid://bntaust4kg8hf"]
 
 [ext_resource type="Script" uid="uid://dkahq6smeohoq" path="res://Scenes/Enemies/Vampire/VampireCharacter.gd" id="1_k26hg"]
 [ext_resource type="PackedScene" uid="uid://bvacj8dyi3rii" path="res://Scenes/Enemies/Vampire/VampireModel.tscn" id="1_nq427"]
@@ -8,6 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://yx37w2ca6ll3" path="res://Assets/Audio/Enemies/vampire1.wav" id="5_04t2h"]
 [ext_resource type="AudioStream" uid="uid://cgiqrs8c2cf50" path="res://Assets/Audio/Enemies/vampire2.wav" id="6_k26hg"]
 [ext_resource type="AudioStream" uid="uid://dq28txye8oo31" path="res://Assets/Audio/Enemies/vampire_running.wav" id="7_41n2j"]
+[ext_resource type="PackedScene" uid="uid://1e1alrqipimu" path="res://Scenes/Collider/DamageCollider.tscn" id="9_e6ufl"]
+[ext_resource type="PackedScene" uid="uid://co8mx3k2bewsy" path="res://Scenes/Collider/HurtBox.tscn" id="10_a3gqg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nq427"]
 radius = 0.30273438
@@ -18,6 +20,12 @@ streams_count = 3
 stream_0/stream = ExtResource("5_04t2h")
 stream_1/stream = ExtResource("6_k26hg")
 stream_2/stream = ExtResource("7_41n2j")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a3gqg"]
+size = Vector3(0.2, 0.5, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e6ufl"]
+size = Vector3(0.6, 1.2, 0.6)
 
 [node name="VampireCharacter" type="CharacterBody3D"]
 collision_layer = 0
@@ -43,4 +51,21 @@ stream = SubResource("AudioStreamRandomizer_e6ufl")
 wait_time = 3.0
 autostart = true
 
+[node name="DamageCollider" parent="." instance=ExtResource("9_e6ufl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9217135, -0.19842458)
+collision_layer = 4
+collision_mask = 8
+damage_amount = 16
+explodes_on_hit = false
+dies_on_hit = false
+shape = SubResource("BoxShape3D_a3gqg")
+
+[node name="HurtBox" parent="." instance=ExtResource("10_a3gqg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6016741, 0)
+collision_layer = 128
+collision_mask = 16
+max_health = 20
+shape = SubResource("BoxShape3D_e6ufl")
+
 [connection signal="timeout" from="RunningTimer" to="." method="_on_running_timer_timeout"]
+[connection signal="damage_given" from="DamageCollider" to="." method="_on_damage_collider_damage_given"]

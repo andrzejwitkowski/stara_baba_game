@@ -1,9 +1,10 @@
-[gd_scene load_steps=48 format=4 uid="uid://dx3s5ue7ie78u"]
+[gd_scene load_steps=50 format=4 uid="uid://dx3s5ue7ie78u"]
 
 [ext_resource type="Script" uid="uid://257n4thcxxpt" path="res://Scenes/Granny/Granny.gd" id="1_cqa7y"]
 [ext_resource type="Texture2D" uid="uid://cun8117bh1w85" path="res://Assets/Models/Granny/Granny_FitnessGrandma_diffuse.jpg" id="1_rk2ul"]
 [ext_resource type="Texture2D" uid="uid://dp4xeg2vqy8ik" path="res://Assets/Models/Granny/Granny_FitnessGrandma_normal.jpg" id="2_cqa7y"]
 [ext_resource type="Texture2D" uid="uid://n6wbi2wjkya3" path="res://Assets/Models/Granny/Granny_FitnessGrandma_FaceAnimMap.png" id="3_4xqq0"]
+[ext_resource type="PackedScene" uid="uid://co8mx3k2bewsy" path="res://Scenes/Collider/HurtBox.tscn" id="5_4xqq0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rib6"]
 resource_name = "Grandma_MAT"
@@ -7660,6 +7661,10 @@ states/Grounded/position = Vector2(426, 143)
 transitions = ["Grounded", "Airborne", SubResource("AnimationNodeStateMachineTransition_ix00n"), "Airborne", "Grounded", SubResource("AnimationNodeStateMachineTransition_5xbvs"), "Start", "Grounded", SubResource("AnimationNodeStateMachineTransition_mkseu")]
 graph_offset = Vector2(0, -27.1646)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4xqq0"]
+height = 1.4
+radius = 0.3
+
 [node name="Granny" type="CharacterBody3D"]
 collision_layer = 2
 script = ExtResource("1_cqa7y")
@@ -8411,5 +8416,12 @@ tree_root = SubResource("AnimationNodeStateMachine_cqa7y")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../Model/AnimationPlayer")
 parameters/Grounded/Throw/TimeScale/scale = 2.5
+
+[node name="HurtBox" parent="." instance=ExtResource("5_4xqq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78518707, -0.005731344)
+collision_layer = 8
+collision_mask = 4
+kills_paranet_on_death = false
+shape = SubResource("CylinderShape3D_4xqq0")
 
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]

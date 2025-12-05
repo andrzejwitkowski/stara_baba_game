@@ -1,13 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcuhgrwjm8om4"]
+[gd_scene load_steps=10 format=3 uid="uid://bcuhgrwjm8om4"]
 
 [ext_resource type="PackedScene" uid="uid://vvfgglsxubqf" path="res://Assets/Models/Kenney/TowerDefense/tower-square-build-b.glb" id="1_adw2l"]
 [ext_resource type="Script" uid="uid://de1ob5ob6ssix" path="res://Scenes/Turret/Turret.gd" id="1_upwia"]
 [ext_resource type="PackedScene" uid="uid://d5ni2ukbe01l" path="res://Assets/Models/Kenney/TowerDefense/weapon-turret.glb" id="2_8n1bl"]
 [ext_resource type="PackedScene" uid="uid://bjuommonxcf7w" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn" id="3_8gyjb"]
 [ext_resource type="AudioStream" uid="uid://ky1nqiedsg2y" path="res://Assets/Audio/Effects/Spell_02_Short.wav" id="4_efegm"]
+[ext_resource type="PackedScene" uid="uid://co8mx3k2bewsy" path="res://Scenes/Collider/HurtBox.tscn" id="6_qyqsk"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8n1bl"]
 radius = 10.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lkdj1"]
+size = Vector3(1.6, 2, 1.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qyqsk"]
+size = Vector3(1.4, 1.5, 1.4)
 
 [node name="Turret" type="Node3D"]
 script = ExtResource("1_upwia")
@@ -37,6 +44,21 @@ shape = SubResource("SphereShape3D_8n1bl")
 
 [node name="Effect" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_efegm")
+
+[node name="HurtBox" parent="." instance=ExtResource("6_qyqsk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9737987, 0)
+visible = false
+collision_layer = 128
+collision_mask = 16
+max_health = 20
+shape = SubResource("BoxShape3D_lkdj1")
+
+[node name="Block" type="StaticBody3D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7322968, 0)
+shape = SubResource("BoxShape3D_qyqsk")
 
 [connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="body_shape_entered" from="PlayerDetection" to="." method="_on_player_detection_body_shape_entered"]

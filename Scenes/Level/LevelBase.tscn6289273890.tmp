@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://coltj80l1uumf" path="res://Scenes/Pickup/PickUpTracker.tscn" id="10_6ehlo"]
 [ext_resource type="PackedScene" uid="uid://7x4ejobcta6i" path="res://Scenes/Pickup/Key.tscn" id="10_yeolc"]
 [ext_resource type="PackedScene" uid="uid://bymri7vdhwe0" path="res://Scenes/LevelExit/LevelExit.tscn" id="12_ilrmw"]
-[ext_resource type="PackedScene" uid="uid://bcuhgrwjm8om4" path="res://Scenes/Turret/Turret.tscn" id="14_pggwt"]
+[ext_resource type="PackedScene" uid="uid://fc8n2b52abx1" path="res://Scenes/Enemies/Pumpkin/Pumpkin.tscn" id="14_pggwt"]
 [ext_resource type="PackedScene" uid="uid://dkvxlfal5wv4g" path="res://Scenes/ObjectContainer/ObjectContainer.tscn" id="15_t11kh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bgw71"]
@@ -78,5 +78,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7958884, 0, 3.6130638)
 
 [node name="ObjectContainer" parent="." instance=ExtResource("15_t11kh")]
 
-[node name="Turret" parent="." instance=ExtResource("14_pggwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9605503, 0, 11.347356)
+[node name="Pumpkin" parent="." instance=ExtResource("14_pggwt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24186134, -9.536743e-07, 12.22889)

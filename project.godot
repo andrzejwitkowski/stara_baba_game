@@ -95,3 +95,4 @@ exit={
 3d_physics/layer_5="player_bullet"
 3d_physics/layer_6="basic_key"
 3d_physics/layer_7="level_key"
+3d_physics/layer_8="enemy_hit"

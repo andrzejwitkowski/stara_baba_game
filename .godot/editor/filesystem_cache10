@@ -1,9 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1764868092
+::res://::1764953643
 icon.svg::CompressedTexture2D::8116842358924895146::1749023754::1764177802::1::::<><><>0<>0<>02755907e2a66c178f27b48fcc5e9e02<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1757335464
 ::res://Assets/Audio/::1764775692
-::res://Assets/Audio/Effects/::1764870565
+::res://Assets/Audio/Effects/::1764870566
 242503__wrong-action.wav::AudioStreamWAV::2020392166896053803::1764530853::1764530853::1::::<><><>0<>0<>aa3d585a863c3c019f4d9cec83b6e56b<>res://.godot/imported/242503__wrong-action.wav-f73c1c6cde42eb55075433c9ede4029c.sample::
 coffin_open.wav::AudioStreamWAV::2343126678800771899::1764782605::1764782605::1::::<><><>0<>0<>0b453eb01c1ab8b45d91f2ee5170c4e5<>res://.godot/imported/coffin_open.wav-2fc92744b708b83c61a70653c71bde2f.sample::
 coin_pickup.wav::AudioStreamWAV::1470276870307588880::1764443529::1764443529::1::::<><><>0<>0<>248a035262fc7bcd9f735150a3bb72e7<>res://.godot/imported/coin_pickup.wav-51a29fa7782239ca3ebbb6ea9d212879.sample::
@@ -206,17 +206,18 @@ VampireCoffin.gd::GDScript::6803735303247711188::1764789008::0::1::::<>Node3D<><
 VampireCoffin.tscn::PackedScene::7211420653780055436::1764789008::0::1::::<><><>0<>0<><>::uid://c361r5r4yoh0w::::res://Scenes/Enemies/Vampire/VampireCoffin.gd<>uid://cc72i68vuhj4l::::res://Assets/Models/Kenney/Graveyard/coffin-old.glb<>uid://wt4bqttpml42::::res://Assets/Models/Kenney/Graveyard/coffin.glb<>uid://bvacj8dyi3rii::::res://Scenes/Enemies/Vampire/VampireModel.tscn<>uid://8na7o5tc0f0n::::res://Assets/Audio/Effects/coffin_open.wav<>uid://b5ax87lmu24uh::::res://Assets/Audio/Enemies/269115__visualpony__growl-4.wav<>uid://bjuommonxcf7w::::res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn
 VampireModel.gd::GDScript::532508344827354346::1764787580::0::1::::VampireModel<>Node3D<><>0<>0<><>::
 VampireModel.tscn::PackedScene::3860525645229687420::1764787580::0::1::::<><><>0<>0<><>::uid://nqgvpbq30ga6::::res://Assets/Models/Kenney/Graveyard/Textures/colormap.png<>uid://ht7lm3v7wmsg::::res://Scenes/Enemies/Vampire/VampireModel.gd
-::res://Scenes/Fireball/::1764870535
-Fireball.tscn::PackedScene::8661554280221987973::1764870535::0::1::::<><><>0<>0<><>::uid://bgmbis0cwfw6t::::res://Scenes/Utilities/LifeTimer/LifeTimer.tscn
-::res://Scenes/Granny/::1764274456
-Granny.gd::GDScript::1958997822788047973::1764273575::0::1::::Granny<>CharacterBody3D<><>0<>0<><>::
-Granny.tscn::PackedScene::8832555569665705110::1764274456::0::1::::<><><>0<>0<><>::uid://257n4thcxxpt::::res://Scenes/Granny/Granny.gd<>uid://cun8117bh1w85::::res://Assets/Models/Granny/Granny_FitnessGrandma_diffuse.jpg<>uid://dp4xeg2vqy8ik::::res://Assets/Models/Granny/Granny_FitnessGrandma_normal.jpg<>uid://n6wbi2wjkya3::::res://Assets/Models/Granny/Granny_FitnessGrandma_FaceAnimMap.png
+::res://Scenes/Fireball/::1764872567
+Fireball.gd::GDScript::4530424697711496908::1764872567::0::1::::FireBall<>Node3D<><>0<>0<><>::
+Fireball.tscn::PackedScene::8661554280221987973::1764872567::0::1::::<><><>0<>0<><>::uid://b5stoynpcblcu::::res://Scenes/Fireball/Fireball.gd<>uid://bgmbis0cwfw6t::::res://Scenes/Utilities/LifeTimer/LifeTimer.tscn<>uid://d1ykld024loyy::::res://Assets/Audio/Effects/player_shoot.wav
+::res://Scenes/Granny/::1764874588
+Granny.gd::GDScript::1958997822788047973::1764874588::0::1::::Granny<>CharacterBody3D<><>0<>0<><>::
+Granny.tscn::PackedScene::8832555569665705110::1764874588::0::1::::<><><>0<>0<><>::uid://257n4thcxxpt::::res://Scenes/Granny/Granny.gd<>uid://cun8117bh1w85::::res://Assets/Models/Granny/Granny_FitnessGrandma_diffuse.jpg<>uid://dp4xeg2vqy8ik::::res://Assets/Models/Granny/Granny_FitnessGrandma_normal.jpg<>uid://n6wbi2wjkya3::::res://Assets/Models/Granny/Granny_FitnessGrandma_FaceAnimMap.png
 ::res://Scenes/Hud/::1764616659
 Hud.gd::GDScript::3673489168199257680::1764616659::0::1::::<>Control<><>0<>0<><>::
 Hud.tscn::PackedScene::7738289071517410559::1764616659::0::1::::<><><>0<>0<><>::uid://bslp3hmi6b0do::::res://Scenes/Hud/Hud.gd<>uid://wp52r2yb5xfa::::res://Assets/Images/Textures/Items/coin-gold.png<>uid://cu5sx0fa5hr31::::res://Assets/Images/Textures/Items/jewel.png<>uid://4gpnuixukwse::::res://Assets/Images/Textures/Items/key.png
-::res://Scenes/Level/::1764870159
+::res://Scenes/Level/::1764872550
 LevelBase.gd::GDScript::7906080679076770369::1764615950::0::1::::<>Node<><>0<>0<><>::
-LevelBase.tscn::PackedScene::3253767895970175850::1764870159::0::1::::<><><>0<>0<><>::uid://cbfj8x6yxtq32::::res://Assets/Images/Hdr/LevelSky.hdr<>uid://dkv081yb17o7j::::res://Scenes/Level/LevelBase.gd<>uid://diiqqw6341r72::::res://Scenes/Hud/Hud.tscn<>uid://dvxhdoqb1xwpm::::res://Assets/Audio/Music/Adventures in Adventureland.mp3<>uid://cgnfsivumhmys::::res://Assets/Audio/Music/Lord of the Rangs.mp3<>uid://byfyf60k3pbwa::::res://Scenes/Scenery/TestPlatform.tscn<>uid://dx3s5ue7ie78u::::res://Scenes/Granny/Granny.tscn<>uid://vavyjw54lhwx::::res://Scenes/Pickup/Jewel.tscn<>uid://b5mhy3md11srd::::res://Scenes/Pickup/Coin.tscn<>uid://coltj80l1uumf::::res://Scenes/Pickup/PickUpTracker.tscn<>uid://7x4ejobcta6i::::res://Scenes/Pickup/Key.tscn<>uid://bymri7vdhwe0::::res://Scenes/LevelExit/LevelExit.tscn<>uid://da0jbrrvf0qrs::::res://Scenes/Enemies/Vampire/VampireCoffin.tscn<>uid://bcuhgrwjm8om4::::res://Scenes/Turret/Turret.tscn<>uid://dkvxlfal5wv4g::::res://Scenes/ObjectContainer/ObjectContainer.tscn
+LevelBase.tscn::PackedScene::3253767895970175850::1764872550::0::1::::<><><>0<>0<><>::uid://cbfj8x6yxtq32::::res://Assets/Images/Hdr/LevelSky.hdr<>uid://dkv081yb17o7j::::res://Scenes/Level/LevelBase.gd<>uid://diiqqw6341r72::::res://Scenes/Hud/Hud.tscn<>uid://dvxhdoqb1xwpm::::res://Assets/Audio/Music/Adventures in Adventureland.mp3<>uid://cgnfsivumhmys::::res://Assets/Audio/Music/Lord of the Rangs.mp3<>uid://byfyf60k3pbwa::::res://Scenes/Scenery/TestPlatform.tscn<>uid://dx3s5ue7ie78u::::res://Scenes/Granny/Granny.tscn<>uid://vavyjw54lhwx::::res://Scenes/Pickup/Jewel.tscn<>uid://b5mhy3md11srd::::res://Scenes/Pickup/Coin.tscn<>uid://coltj80l1uumf::::res://Scenes/Pickup/PickUpTracker.tscn<>uid://7x4ejobcta6i::::res://Scenes/Pickup/Key.tscn<>uid://bymri7vdhwe0::::res://Scenes/LevelExit/LevelExit.tscn<>uid://dkvxlfal5wv4g::::res://Scenes/ObjectContainer/ObjectContainer.tscn
 ::res://Scenes/LevelExit/::1764615970
 LevelExit.gd::GDScript::5560011746604883002::1764615970::0::1::::<>Node3D<><>0<>0<><>::
 LevelExit.tscn::PackedScene::120493342724043905::1764533095::0::1::::<><><>0<>0<><>::uid://43hknqdmld3p::::res://Assets/Images/Textures/kenney_prototype-textures/fence-straight.glb<>uid://k3nx7wub01gg::::res://Assets/Images/Textures/kenney_prototype-textures/door-rotate-large.glb<>uid://clhkt02ctiacg::::res://Scenes/LevelExit/LevelExit.gd<>uid://31xtf028bnfv::::res://Assets/Audio/Effects/242503__wrong-action.wav
@@ -239,10 +240,10 @@ PickUpTracker.tscn::PackedScene::5779364801047029069::1764525356::0::1::::<><><>
 ::res://Scenes/Scenery/::1764774853
 TestPlatform.tscn::PackedScene::4082742623908424744::1764774853::0::1::::<><><>0<>0<><>::uid://bhqilcxdbbfly::::res://Assets/Images/Textures/kenney_prototype-textures/PNG/Light/texture_07.png
 ::res://Scenes/Turret/::1764870159
-TurretBullet.gd::GDScript::2630054296824778003::1764870159::0::1::::TurreBullet<>Node3D<><>0<>0<><>::
-TurretBullet.tscn::PackedScene::533334883576117565::1764869582::0::1::::<><><>0<>0<><>::uid://bofutyhh34ix5::::res://Assets/Models/Kenney/TowerDefense/weapon-ammo-bullet.glb<>uid://bdqau0f7jucxn::::res://Scenes/Turret/TurretBullet.gd<>uid://bgmbis0cwfw6t::::res://Scenes/Utilities/LifeTimer/LifeTimer.tscn<>uid://bjuommonxcf7w::::res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn
 Turret.gd::GDScript::7494544668344978831::1764869819::0::1::::Turret<>Node3D<><>0<>0<><>::
 Turret.tscn::PackedScene::2568522587072074069::1764869819::0::1::::<><><>0<>0<><>::uid://vvfgglsxubqf::::res://Assets/Models/Kenney/TowerDefense/tower-square-build-b.glb<>uid://de1ob5ob6ssix::::res://Scenes/Turret/Turret.gd<>uid://d5ni2ukbe01l::::res://Assets/Models/Kenney/TowerDefense/weapon-turret.glb<>uid://bjuommonxcf7w::::res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn<>uid://ky1nqiedsg2y::::res://Assets/Audio/Effects/Spell_02_Short.wav
+TurretBullet.gd::GDScript::2630054296824778003::1764870159::0::1::::TurreBullet<>Node3D<><>0<>0<><>::
+TurretBullet.tscn::PackedScene::533334883576117565::1764869582::0::1::::<><><>0<>0<><>::uid://bofutyhh34ix5::::res://Assets/Models/Kenney/TowerDefense/weapon-ammo-bullet.glb<>uid://bdqau0f7jucxn::::res://Scenes/Turret/TurretBullet.gd<>uid://bgmbis0cwfw6t::::res://Scenes/Utilities/LifeTimer/LifeTimer.tscn<>uid://bjuommonxcf7w::::res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn
 ::res://Scenes/Utilities/::1764617650
 ::res://Scenes/Utilities/FallsOff/::1764617274
 FallsOff.gd::GDScript::8591362525553454793::1764617196::0::1::::<>Node3D<><>0<>0<><>::

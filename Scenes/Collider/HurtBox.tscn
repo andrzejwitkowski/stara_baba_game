@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://co8mx3k2bewsy"]
+
+[ext_resource type="PackedScene" uid="uid://b026ximmfxq8k" path="res://Scenes/Collider/Collider.tscn" id="1_ccwbq"]
+[ext_resource type="Script" uid="uid://cfmoyc0mih3ux" path="res://Scenes/Collider/HurtBox.gd" id="2_50obw"]
+
+[node name="HurtBox" instance=ExtResource("1_ccwbq")]
+script = ExtResource("2_50obw")
+kills_paranet_on_death = true
+dies_on_single_impact = false
+max_health = 100

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://1e1alrqipimu"]
+
+[ext_resource type="PackedScene" uid="uid://b026ximmfxq8k" path="res://Scenes/Collider/Collider.tscn" id="1_hac0y"]
+[ext_resource type="Script" uid="uid://cbaik5gnrt7ri" path="res://Scenes/Collider/DamageCollider.gd" id="2_ox8fb"]
+
+[node name="DamageCollider" instance=ExtResource("1_hac0y")]
+script = ExtResource("2_ox8fb")
+damage_amount = 10
+explodes_on_hit = true
+dies_on_hit = true

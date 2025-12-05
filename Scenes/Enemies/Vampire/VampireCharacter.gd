@@ -5,6 +5,7 @@ class_name VampireCharacter
 @onready var running_effect: AudioStreamPlayer3D = $RunningEffect
 @onready var link_player: LinkPlayer = $LinkPlayer
 @onready var vampire_model: VampireModel = $VampireModel
+@onready var blookd_suck_effect: AudioStreamPlayer3D = $BlookdSuckEffect
 
 @export var _gravity: float = -5.0
 @export var speed: float = 1.0
@@ -44,3 +45,8 @@ func chase_grany(delta) -> void:
 	position.x += speed * direction.x * delta 
 	position.z += speed * direction.z * delta
 	
+
+
+func _on_damage_collider_damage_given(value: int) -> void:
+	if !blookd_suck_effect.playing:
+		blookd_suck_effect.play()

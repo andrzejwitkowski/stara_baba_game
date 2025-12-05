@@ -12,7 +12,7 @@ extends CharacterBody3D
 
 
 var _can_jump: bool = true
-var _was_on_floor: bool = falseq
+var _was_on_floor: bool = false
 
 func _physics_process(delta: float) -> void:
 	if !link_player.granny:
