@@ -9,6 +9,8 @@ signal damage_given(value: float)
 
 func emit_damage_given(value: float):
 	damage_given.emit(value)
+	if dies_on_hit:
+		die()
 
 func get_damage():
 	return self.damage_amount
@@ -17,10 +19,12 @@ func get_damage():
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _on_area_entered(_area: Area3D) -> void:
-	pass
+	emit_damage_given(damage_amount)
+	
+func _on_body_entered(body: Node3D) -> void:
+	emit_damage_given(damage_amount)

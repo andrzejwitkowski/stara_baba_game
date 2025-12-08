@@ -3,8 +3,7 @@ extends Node3D
 @onready var label_holder: Node3D = $LabelHolder
 @onready var label_key: Label3D = $LabelHolder/LabelKey
 @onready var effects: AudioStreamPlayer3D = $Effects
-
-var key_collected = false
+var key_collected: bool = false
 
 func _ready():
 	SignalHub.on_key_collected.connect(on_key_collected)
@@ -15,7 +14,7 @@ func on_key_collected():
 	key_collected = true
 	
 func animate_label():
-	var tween = create_tween()
+	var tween: Tween = create_tween()
 	tween.set_loops()
 	tween.tween_property(label_key, "visible", true, 0.6)
 	tween.tween_property(label_key, "visible", false, 0.1)

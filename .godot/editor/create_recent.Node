@@ -1,3 +1,6 @@
+GPUParticles3D
+AnimationPlayer
+AudioStreamPlayer3D
 CollisionShape3D
 StaticBody3D
 Area3D
@@ -5,10 +8,7 @@ MeshInstance3D
 Collider
 Node3D
 BoneAttachment3D
-GPUParticles3D
-AudioStreamPlayer3D
 Timer
 Marker3D
 Node
 CharacterBody3D
-RayCast3D

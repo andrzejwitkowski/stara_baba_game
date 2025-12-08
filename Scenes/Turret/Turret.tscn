@@ -54,6 +54,7 @@ max_health = 20
 shape = SubResource("BoxShape3D_lkdj1")
 
 [node name="Block" type="StaticBody3D" parent="."]
+collision_layer = 256
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Block"]
